@@ -7,8 +7,13 @@ from azure.storage.blob import BlobServiceClient, ContentSettings
 
 app = FastAPI(title="PDF to Azure Blob Uploader")
 
+
+print("AZURE_STORAGE_CONNECTION_STRING =", os.getenv("AZURE_STORAGE_CONNECTION_STRING"))
+
 # Blob Storage 설정 (실서비스에선 환경변수로 빼는 걸 권장)
 CONNECT_STR = os.getenv("AZURE_STORAGE_CONNECTION_STRING")
+
+
 CONTAINER_NAME = "docs"
 
 blob_service_client = BlobServiceClient.from_connection_string(CONNECT_STR)
