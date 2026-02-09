@@ -7,7 +7,7 @@ import re
 import os
 
 CONNECT_STR = os.getenv("AZURE_STORAGE_CONNECTION_STRING")
-CONTAINER_NAME = "docs"
+CONTAINER_NAME = "mahindra-pdf"
 
 BASE_URL = "https://www.mahindrausa.com"
 SERIES_LIST_URL = "https://www.mahindrausa.com/build-your-own/series/"
